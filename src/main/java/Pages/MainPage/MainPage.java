@@ -21,4 +21,8 @@ public class MainPage {
         else
             System.out.println("YouTube main logo ");
     }
+
+    public void checkYouTubeRegion(){
+
+    }
 }
