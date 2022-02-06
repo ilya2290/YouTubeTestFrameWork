@@ -29,4 +29,8 @@ public class MainPage {
     public void checkSearchFieldExisting(){
 
     }
+
+    public void searchVideo(){
+
+    }
 }
