@@ -33,4 +33,8 @@ public class MainPage {
     public void searchVideo(){
 
     }
+
+    public void clearSearchField(){
+
+    }
 }
