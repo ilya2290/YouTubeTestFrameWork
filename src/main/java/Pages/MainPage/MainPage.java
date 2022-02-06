@@ -25,4 +25,8 @@ public class MainPage {
     public void checkYouTubeRegion(){
 
     }
+
+    public void checkSearchFieldExisting(){
+
+    }
 }
