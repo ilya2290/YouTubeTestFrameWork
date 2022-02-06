@@ -21,4 +21,16 @@ public class MainPage {
         else
             System.out.println("YouTube main logo ");
     }
+
+    public void checkYouTubeRegion(){
+
+    }
+
+    public void checkSearchFieldExisting(){
+
+    }
+
+    public void searchVideo(){
+
+    }
 }
