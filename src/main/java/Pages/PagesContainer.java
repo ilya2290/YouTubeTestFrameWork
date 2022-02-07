@@ -10,7 +10,7 @@ public class PagesContainer {
    }
    private WebDriver driver;
    private String chosenFilm;
-   public MainPage mainPage = new MainPage(driver, chosenFilm);
+   public MainPage mainPage = new MainPage(driver);
 
 
 }

@@ -8,10 +8,8 @@ public class MainPage {
     private String win;
     private String chosenFilm;
 
-    public MainPage(WebDriver driver, String chosenFilm){
-
+    public MainPage(WebDriver driver){
         this.driver = driver;
-        this.chosenFilm = chosenFilm;
     }
     public void chosenFilm(String chosenFilm){this.chosenFilm = chosenFilm;}
     public String getChosenFilm(){return chosenFilm;}
@@ -21,20 +19,11 @@ public class MainPage {
     public String getWin(){return win;}
     public void setWin(String win){this.win = win;}
 
-
-
-
-
-
     // By youtubeMainLogo = By.ByXPath("//yt-icon[@id ='logo-icon' and (@class='style-scope ytd-logo')]");
     By youtubeMain = By.xpath("//yt-icon[@id ='logo-icon' and (@class='style-scope ytd-logo')]"); // Разница с верхним?
     By youtubeMainSearchField = By.xpath("//yt-icon[@id='search-icon' and (@class='style-scope ytd-searchbox')]");
     By youtubeVideoFromList = By.xpath("//*[@id='video-title-link' and (@href='/watch?v=gTP55I3kSB0')]");
     By youtubeVirtualKeyboard = By.xpath("//a[@class='gsst_a']");
-
-
-
-
     }
 
 
@@ -62,7 +51,7 @@ public class MainPage {
 
     public void searchAndOpenVideo(){
     driver.findElement(youtubeVideoFromList).click();
-    if(driver.switchTo(chosenFilm).window()){
+    if(driver.){
         System.out.println("The video is opened");
     }
     else
