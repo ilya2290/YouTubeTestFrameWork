@@ -21,8 +21,9 @@ public class SeleniumProperties {
 
 
     public WebDriver driver = new ChromeDriver();
+    private String chosenFilm;
     //public SeleniumProperties seleniumProperties = new SeleniumProperties();
-    public PagesContainer pagesContainer = new PagesContainer(driver);
+    public PagesContainer pagesContainer = new PagesContainer(driver, chosenFilm);
     public Assertion assertion = new Assertion();
 
 
