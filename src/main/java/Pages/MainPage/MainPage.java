@@ -20,7 +20,7 @@ public class MainPage {
     public void setWin(String win){this.win = win;}
 
     // By youtubeMainLogo = By.ByXPath("//yt-icon[@id ='logo-icon' and (@class='style-scope ytd-logo')]");
-    By youtubeMain = By.xpath("//yt-icon[@id ='logo-icon' and (@class='style-scope ytd-logo')]");
+    By youtubeMain = By.xpath("//yt-icon[@id ='logo-icon' and (@class='style-scope ytd-logo')]"); //difference with up
     By youtubeMainSearchField = By.xpath("//yt-icon[@id='search-icon' and (@class='style-scope ytd-searchbox')]");
     By youtubeVideoFromList = By.xpath("//*[@id='video-title-link' and (@href='/watch?v=gTP55I3kSB0')]");
     By youtubeVirtualKeyboard = By.xpath("//a[@class='gsst_a']");
