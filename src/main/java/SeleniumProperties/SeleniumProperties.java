@@ -32,7 +32,7 @@ public class SeleniumProperties {
     @BeforeTest
     public void beforeTestSetup() {
         driver.manage().window().maximize();
-        driver.manage().timeouts().pageLoadTimeout(15, TimeUnit.SECONDS); // Узнать какой есть новый метод
+        driver.manage().timeouts().pageLoadTimeout(15, TimeUnit.SECONDS);
         driver.get(mainPage_URL);
     }
 
