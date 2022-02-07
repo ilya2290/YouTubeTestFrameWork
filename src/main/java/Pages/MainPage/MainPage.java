@@ -51,12 +51,14 @@ public class MainPage {
 
     public void searchAndOpenVideo(){
     driver.findElement(youtubeVideoFromList).click();
-    if(driver.){
-        //if не дописан
+    /*
+    if(driver){
+
         System.out.println("The video is opened");
     }
     else
         System.out.println("Something was wrong");
+    */
     }
 
     public void clearSearchField(){
