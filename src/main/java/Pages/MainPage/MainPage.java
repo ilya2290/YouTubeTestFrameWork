@@ -52,6 +52,7 @@ public class MainPage {
     public void searchAndOpenVideo(){
     driver.findElement(youtubeVideoFromList).click();
     if(driver.){
+        //if не дописан
         System.out.println("The video is opened");
     }
     else
