@@ -21,8 +21,9 @@ public class SeleniumProperties {
 
 
     public WebDriver driver = new ChromeDriver();
+    private String chosenFilm;
     //public SeleniumProperties seleniumProperties = new SeleniumProperties();
-    public PagesContainer pagesContainer = new PagesContainer(driver);
+    public PagesContainer pagesContainer = new PagesContainer(driver, chosenFilm);
     public Assertion assertion = new Assertion();
 
 
@@ -31,7 +32,7 @@ public class SeleniumProperties {
     @BeforeTest
     public void beforeTestSetup() {
         driver.manage().window().maximize();
-        driver.manage().timeouts().pageLoadTimeout(15, TimeUnit.SECONDS); // Узнать какой есть новый метод
+        driver.manage().timeouts().pageLoadTimeout(15, TimeUnit.SECONDS); //knowing new method
         driver.get(mainPage_URL);
     }
 
