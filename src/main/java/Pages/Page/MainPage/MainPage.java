@@ -3,7 +3,6 @@ package Pages.Page.MainPage;
 import Pages.Page_Core.Page_Core;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
 
 public class MainPage extends Page_Core {
 
