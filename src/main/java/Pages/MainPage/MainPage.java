@@ -37,8 +37,4 @@ public class MainPage {
     public void clearSearchField(){
 
     }
-
-    public void openVirtualKeyboard(){
-
-    }
 }
