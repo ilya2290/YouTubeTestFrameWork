@@ -4,11 +4,18 @@
 <suite name="All Test Suite">
 
 
-    <test name="OpenMainPage">
+    <test name="Test: Main Logo Appearance">
         <classes>
-            <class name="Tests.OpenMainPageTest.OpenMainPageTest"/>
+            <class name="Tests.TEST_OpenMainPage.OpenMainPageTest"/>
         </classes>
     </test>
 
+<!--
+    <test name="Test: Virtual Keyboard Appearance">
+        <classes>
+            <class name="Tests.TEST_CheckVirtualKeyboardAppearance.TEST_CheckVirtualKeyboardAppearance"/>
+        </classes>
+    </test>
+    -->
 
 </suite>
