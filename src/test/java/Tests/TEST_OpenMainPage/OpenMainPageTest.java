@@ -1,6 +1,5 @@
 package Tests.TEST_OpenMainPage;
 
-
 import Test_Core.Test_Core;
 import org.testng.annotations.Test;
 
@@ -18,3 +17,4 @@ public class OpenMainPageTest extends Test_Core {
         mainPage.checkVirtualKeyboardPresence();
     }
 }
+///
