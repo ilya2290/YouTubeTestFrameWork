@@ -17,7 +17,7 @@ public class MainPage extends Page_Core {
     private final By youTubeVirtualKeyboard_Icon = By.xpath("//a[@class='gsst_a']");
     private final By youTubeVirtualKeyboard_Expanded = By.xpath("//div[@class='vk-box']");
     private final By youTubeVoiceSearchButton = By.xpath("//div[@id ='voice-search-button']");
-    private final By youTubeAppsMultiPageButton = By.cssSelector("ytd-app");//Can`t find locator for element. Please help me
+    private final By youTubeAppsMultiPageButton = By.xpath("//yt-icon[@class='style-scope ytd-topbar-menu-button-renderer']");
     private final By youTubeMicrophoneButtonPopup = By.xpath("//div[@id='microphone']");
     private final By youTubeVoiceSearchDialogPopup = By.xpath("//ytd-voice-search-dialog-renderer[@dialog='true']");
     private final By youTubeAppsMultiPageMenu = By.xpath("//div[@id='container' and (@class='menu-container style-scope ytd-multi-page-menu-renderer')]");

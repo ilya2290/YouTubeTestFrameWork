@@ -25,6 +25,7 @@ public class OpenMainPageTest extends Test_Core {
         page_core.openPage("https://www.youtube.com/");
         mainPage.clickMicrophoneButton();
     }
+
     @Test(priority = 4)
     public void cpenYouTubeMusicPage(){
         driver.manage().deleteAllCookies();
