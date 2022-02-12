@@ -12,9 +12,24 @@ public class OpenMainPageTest extends Test_Core {
     }
 
     @Test(priority = 2)
-    public void CheckVirtualKeyboardAppearance() {
+    public void checkVirtualKeyboardAppearance() {
+        driver.manage().deleteAllCookies();
         page_core.openPage("https://www.youtube.com/");
         mainPage.checkVirtualKeyboardPresence();
+    }
+
+    @Test(priority = 3)
+    public void checkVoiceSearchFunction(){
+        driver.manage().deleteAllCookies();
+        page_core.openPage("https://www.youtube.com/");
+        mainPage.clickMicrophoneButton();
+    }
+
+    @Test(priority = 4)
+    public void cpenYouTubeMusicPage(){
+        driver.manage().deleteAllCookies();
+        page_core.openPage("https://www.youtube.com/");
+        mainPage.checkYouTubeMusicPageIsOpenedInNewTab();
     }
 }
 ///

@@ -25,7 +25,7 @@ public class Page_Core {
     }
 
     public By waitAppearanceInDOM(By locator){
-        new WebDriverWait(driver, 5).until(ExpectedConditions.presenceOfElementLocated(locator));  //Подумать нужен ли войд
+        new WebDriverWait(driver, 10).until(ExpectedConditions.presenceOfElementLocated(locator));  //Подумать нужен ли войд
         return locator;
     }
 

@@ -15,8 +15,86 @@ public class MainPage extends Page_Core {
     private final By youTubeMainLogo = By.xpath("//yt-icon[@id ='logo-icon' and (@class='style-scope ytd-logo')]"); //difference with up
     private final By youTubeMainSearchField = By.xpath("//ytd-searchbox[@id='search']");
     private final By youTubeVirtualKeyboard_Icon = By.xpath("//a[@class='gsst_a']");
-    private final By YouTubeVirtualKeyboard_Expanded = By.xpath("//div[@class='vk-box']");
+    private final By youTubeVirtualKeyboard_Expanded = By.xpath("//div[@class='vk-box']");
+    private final By youTubeVoiceSearchButton = By.xpath("//div[@id ='voice-search-button']");
+    private final By youTubeAppsMultiPageButton = By.xpath("//yt-icon[@class='style-scope ytd-topbar-menu-button-renderer']");
+    private final By youTubeMicrophoneButtonPopup = By.xpath("//div[@id='microphone']");
+    private final By youTubeVoiceSearchDialogPopup = By.xpath("//ytd-voice-search-dialog-renderer[@dialog='true']");
+    private final By youTubeAppsMultiPageMenu = By.xpath("//div[@id='container' and (@class='menu-container style-scope ytd-multi-page-menu-renderer')]");
+    private final By youTubeMusicButton = By.xpath("//a[@href='https://music.youtube.com/']");
+    private final By youTubeMusicPageLogo = By.xpath("//a[@class='yt-simple-endpoint style-scope ytmusic-nav-bar']");
     private final By videoFromList = null;
+
+    public void checkAppsMultiPageButton(){
+        waitVisibilityOfElement(driver.findElement(youTubeAppsMultiPageButton));
+        if(driver.findElement(youTubeAppsMultiPageButton).isDisplayed()){
+            System.out.println("\n" + "Check Successfull: Apps multipage button is visible");
+        } else
+            System.out.println("\n" + "Error! Apps multipage button is missed");
+    }
+
+
+    public void clickAppsMultipageButton(){
+        checkAppsMultiPageButton();
+        driver.findElement(youTubeAppsMultiPageButton).click();
+    }
+
+
+    public void checkAppsMultiPageMenu(){
+        clickAppsMultipageButton();
+        waitVisibilityOfElement(driver.findElement(youTubeAppsMultiPageMenu));
+        if(driver.findElement(youTubeAppsMultiPageMenu).isDisplayed()){
+            System.out.println("\n" + "Check Successfull: Apps multipage menu is visible");
+        } else
+            System.out.println("\n" + "Error! YouTube apps multipage menu is missed");
+    }
+
+
+    public void clickYouTubeMusicButton(){
+        checkAppsMultiPageMenu();
+        driver.findElement(youTubeMusicButton).click();
+    }
+
+
+    public void checkYouTubeMusicPageIsOpenedInNewTab(){
+        clickYouTubeMusicButton();
+        waitVisibilityOfElement(driver.findElement(youTubeMusicButton));
+            if(driver.findElement(youTubeMusicPageLogo).isDisplayed()){
+                System.out.println("\n" + "Check Successfull: YouTube Music page is opened in new tab");
+            } else
+                System.out.println("\n" + "Error! YouTube Music page is not opened");
+        }
+
+
+        public void checkVoiceSearchButton(){
+        waitVisibilityOfElement(driver.findElement(youTubeVoiceSearchButton));
+        if (driver.findElement(youTubeVoiceSearchButton).isDisplayed()){
+            System.out.println("\n" + "Check Successfull: YouTube voice search button is visible");
+        } else
+            System.out.println("\n" + "Error! YouTube voice search button is missed");
+    }
+
+    public void clickVoiceSearchButton(){
+        checkVoiceSearchButton();
+        driver.findElement(youTubeVoiceSearchButton).click();
+    }
+
+    public void checkVoiceSearchDialogPopupIsVisible(){
+        clickVoiceSearchButton();
+        waitAppearanceInDOM(youTubeMicrophoneButtonPopup);
+        if(driver.findElement(youTubeMicrophoneButtonPopup).isDisplayed()){
+            driver.findElement(youTubeMicrophoneButtonPopup).click();
+            waitVisibilityOfElement(driver.findElement(youTubeVoiceSearchDialogPopup));
+        } if(driver.findElement(youTubeVoiceSearchDialogPopup).isDisplayed()){
+           System.out.println("Check Successfull: Dialog popup is visible");
+        } else
+            System.out.println("Error! Dialog popup is missed");
+    }
+
+    public void clickMicrophoneButton(){
+        checkVoiceSearchDialogPopupIsVisible();
+        driver.findElement(youTubeMicrophoneButtonPopup).click();
+    }
 
 
     public void checkMainLogo() {
@@ -57,8 +135,8 @@ public class MainPage extends Page_Core {
         waitAppearanceInDOM(youTubeVirtualKeyboard_Icon);
         if (driver.findElement(youTubeVirtualKeyboard_Icon).isDisplayed()) {
             (driver.findElement(youTubeVirtualKeyboard_Icon)).click();
-            waitVisibilityOfElement(driver.findElement(YouTubeVirtualKeyboard_Expanded));
-            if (driver.findElement(YouTubeVirtualKeyboard_Expanded).isDisplayed()) {
+            waitVisibilityOfElement(driver.findElement(youTubeVirtualKeyboard_Expanded));
+            if (driver.findElement(youTubeVirtualKeyboard_Expanded).isDisplayed()) {
                 System.out.println("\n" + "Check Successful: Youtube Virtual Keyboard is present.");
             } else {
                 System.out.println("\n"+"Error! Youtube Virtual Keyboard is not present.");

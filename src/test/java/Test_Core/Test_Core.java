@@ -23,9 +23,9 @@ public class Test_Core {
         driver.manage().timeouts().pageLoadTimeout(15, TimeUnit.SECONDS); //knowing new method
     }
 
-    @AfterTest(alwaysRun = true)
-    public void afterTestSetup() {
-        driver.quit();
-    }
+   @AfterTest(alwaysRun = true)
+   public void afterTestSetup() {
+     driver.quit();
+   }
 //Добавить отчистку локал стореджа и кукис
 }
