@@ -2,6 +2,8 @@ package Project_Core;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.ui.WebDriverWait;
+
 import java.util.concurrent.TimeUnit;
 
 public class ProjectCore {
@@ -13,6 +15,7 @@ public class ProjectCore {
         driver.manage().window().maximize();
         driver.manage().window().setSize(new org.openqa.selenium.Dimension(1920, 1080));
         driver.manage().timeouts().pageLoadTimeout(15, TimeUnit.SECONDS); //knowing new method
+        WebDriverWait wait = new WebDriverWait(driver, 10);
         return driver;
     }
 

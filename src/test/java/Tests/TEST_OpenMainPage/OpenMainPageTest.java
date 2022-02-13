@@ -2,6 +2,7 @@ package Tests.TEST_OpenMainPage;
 
 
 import Test_Core.Test_Core;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.Test;
 
 public class OpenMainPageTest extends Test_Core {
@@ -27,9 +28,18 @@ public class OpenMainPageTest extends Test_Core {
     }
 
     @Test(priority = 4)
-    public void cpenYouTubeMusicPage(){
+    public void clickYouTubeMusicButton(){
         driver.manage().deleteAllCookies();
         page_core.openPage("https://www.youtube.com/");
-        mainPage.checkYouTubeMusicPageIsOpenedInNewTab();
+        mainPage.clickYouTubeMusicButton();
     }
+
+    @Test(priority = 5)
+    public void runPlaylist(){
+        driver.manage().deleteAllCookies();
+        page_core.openPage("https://www.youtube.com/");
+        mainPage.runPlaylist();
+    }
+
+
 }
