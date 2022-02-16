@@ -1,6 +1,5 @@
-package TEST_CheckOpenedYouTubeMusicInNewTab;
+package Tests.TEST_CheckOpenedYouTubeMusicInNewTab;
 
-import Project_Core.ProjectCore;
 import Test_Core.Test_Core;
 import org.testng.annotations.Test;
 

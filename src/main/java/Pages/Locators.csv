@@ -1,0 +1,2 @@
+Name,Xpath
+youTubeMainLogo,"//yt-icon[@id ='logo-icon' and (@class='style-scope ytd-logo')]"
