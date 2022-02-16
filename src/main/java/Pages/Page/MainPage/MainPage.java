@@ -23,6 +23,8 @@ public class MainPage extends Page_Core {
     private final By youTubeAppsMultiPageMenu = By.xpath("//div[@id='container' and (@class='menu-container style-scope ytd-multi-page-menu-renderer')]");
     private final By youTubeMusicButton = By.xpath("//a[@href='https://music.youtube.com/']");
     private final By youTubeMusicPageLogo = By.xpath("//a[@class='yt-simple-endpoint style-scope ytmusic-nav-bar']");
+    private final By agreeBeforeYouContinueToYouTubeCookiesForm = By.xpath("//tp-yt-paper-dialog[@id='dialog']");
+    private final By agreeButtonBeforeYouContinueTouTube = By.xpath("//tp-yt-paper-button[@id='button']//yt-formatted-string[contains(text(),'I Agree')]");
     private final By videoFromList = null;
 
     public void checkAppsMultiPageButton(){
@@ -144,4 +146,14 @@ public class MainPage extends Page_Core {
         } else
             System.out.println("\n"+"Error! Youtube Virtual Keyboard icon is not present");
     }
+
+
+    public void checkAgreeBeforeYouContinueToYouTubeCookies(){ //Метод соглашения с куки в попапе BeforeYouContinueToYouTubeCookies при запуске ютуба(если появляется).
+        waitAppearanceInDOM(agreeBeforeYouContinueToYouTubeCookiesForm);
+        if(driver.findElement(agreeBeforeYouContinueToYouTubeCookiesForm).isDisplayed()){
+            driver.findElement(agreeButtonBeforeYouContinueTouTube).click();
+        }
+    }
+
+
 }

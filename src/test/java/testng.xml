@@ -6,7 +6,7 @@
 
     <test name="Test: Main Logo Appearance">
         <classes>
-            <class name="Tests.TEST_OpenMainPage.OpenMainPageTest"/>
+            <class name="Tests.TEST_CheckVoiceSearchFunction.TEST_CheckVoiceSearchFunction"/>
         </classes>
     </test>
 
