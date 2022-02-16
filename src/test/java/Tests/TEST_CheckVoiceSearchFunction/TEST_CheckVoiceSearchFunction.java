@@ -2,9 +2,6 @@ package Tests.TEST_CheckVoiceSearchFunction;
 
 import Test_Core.Test_Core;
 import org.testng.annotations.Test;
-
-import java.io.FileNotFoundException;
-
 import static Pages.Page_Core.Page_Core.getXpath;
 
 
