@@ -7,7 +7,6 @@ import org.openqa.selenium.WebDriver;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 
-import java.util.concurrent.TimeUnit;
 
 public class Test_Core {
 
@@ -20,7 +19,6 @@ public class Test_Core {
     @BeforeTest
     public void beforeTestSetup() {
         driver.manage().window().maximize();
-        driver.manage().timeouts().pageLoadTimeout(15, TimeUnit.SECONDS); //knowing new method
     }
 
    @AfterTest(alwaysRun = true)

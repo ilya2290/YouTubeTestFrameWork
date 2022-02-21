@@ -11,28 +11,4 @@ public class OpenMainPageTest extends Test_Core {
         page_core.openPage("https://www.youtube.com/");
         mainPage.checkMainLogo();
     }
-
-
-    @Test(priority = 2)
-    public void checkVirtualKeyboardAppearance() {
-        driver.manage().deleteAllCookies();
-        page_core.openPage("https://www.youtube.com/");
-        mainPage.checkVirtualKeyboardPresence();
-    }
-
-
-    @Test(priority = 3)
-    public void checkVoiceSearchFunction(){
-        driver.manage().deleteAllCookies();
-        page_core.openPage("https://www.youtube.com/");
-        mainPage.clickMicrophoneButton();
-    }
-
-
-    @Test(priority = 4)
-    public void cpenYouTubeMusicPage(){
-        driver.manage().deleteAllCookies();
-        page_core.openPage("https://www.youtube.com/");
-        mainPage.checkYouTubeMusicPageIsOpenedInNewTab();
-    }
 }

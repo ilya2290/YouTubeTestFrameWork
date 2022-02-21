@@ -1,12 +1,13 @@
-package Tests.TEST_CheckOpenedYouTubeMusicInNewTab;
+package Tests.TEST_OpenYouTubeMusicPage;
 
 import Test_Core.Test_Core;
 import org.testng.annotations.Test;
 
-public class TEST_CheckOpenedYouTubeMusicInNewTab extends Test_Core {
+public class TEST_OpenYouTubeMusicPage extends Test_Core {
 
     @Test()
-    public void cpenYouTubeMusicPage(){
+    public void openYouTubeMusicPage() {
+        driver.manage().deleteAllCookies();
         page_core.openPage("https://www.youtube.com/");
         mainPage.checkYouTubeMusicPageIsOpenedInNewTab();
     }

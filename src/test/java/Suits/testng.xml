@@ -10,12 +10,4 @@
         </classes>
     </test>
 
-<!--
-    <test name="Test: Virtual Keyboard Appearance">
-        <classes>
-            <class name="Tests.TEST_CheckVirtualKeyboardAppearance.TEST_CheckVirtualKeyboardAppearance"/>
-        </classes>
-    </test>
-    -->
-
 </suite>

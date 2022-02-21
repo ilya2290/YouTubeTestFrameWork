@@ -18,19 +18,19 @@ public class MainPage extends Page_Core {
     private final By youTubeVirtualKeyboard_Expanded = By.xpath("//div[@class='vk-box']");
     private final By youTubeVoiceSearchButton = By.xpath("//div[@id ='voice-search-button']");
     private final By youTubeAppsMultiPageButton = By.xpath("//yt-icon[@class='style-scope ytd-topbar-menu-button-renderer']");
-    private final By youTubeMicrophoneButtonPopup = By.xpath("//div[@id='microphone']");
+    private final By youTubeMicrophoneButtonPopup = By.xpath("/html/body/ytd-app/div/div/ytd-masthead/div[3]/div[2]/div/ytd-button-renderer/a/yt-icon-button"); // временный хпас, тут нужно изменить
     private final By youTubeVoiceSearchDialogPopup = By.xpath("//ytd-voice-search-dialog-renderer[@dialog='true']");
     private final By youTubeAppsMultiPageMenu = By.xpath("//div[@id='container' and (@class='menu-container style-scope ytd-multi-page-menu-renderer')]");
     private final By youTubeMusicButton = By.xpath("//a[@href='https://music.youtube.com/']");
     private final By youTubeMusicPageLogo = By.xpath("//a[@class='yt-simple-endpoint style-scope ytmusic-nav-bar']");
     private final By agreeBeforeYouContinueToYouTubeCookiesForm = By.xpath("//tp-yt-paper-dialog[@id='dialog']");
     private final By agreeButtonBeforeYouContinueTouTube = By.xpath("//tp-yt-paper-button[@id='button']//yt-formatted-string[contains(text(),'I Agree')]");
-    private final By videoFromList = null;
+
 
     public void checkAppsMultiPageButton(){
         waitVisibilityOfElement(driver.findElement(youTubeAppsMultiPageButton));
         if(driver.findElement(youTubeAppsMultiPageButton).isDisplayed()){
-            System.out.println("\n" + "Check Successfull: Apps multipage button is visible");
+            System.out.println("\n" + "Check Successful: Apps multipage button is visible");
         } else
             System.out.println("\n" + "Error! Apps multipage button is missed");
     }
@@ -76,10 +76,12 @@ public class MainPage extends Page_Core {
             System.out.println("\n" + "Error! YouTube voice search button is missed");
     }
 
+
     public void clickVoiceSearchButton(){
         checkVoiceSearchButton();
         driver.findElement(youTubeVoiceSearchButton).click();
     }
+
 
     public void checkVoiceSearchDialogPopupIsVisible(){
         clickVoiceSearchButton();
@@ -93,9 +95,10 @@ public class MainPage extends Page_Core {
             System.out.println("Error! Dialog popup is missed");
     }
 
+
     public void clickMicrophoneButton(){
         checkVoiceSearchDialogPopupIsVisible();
-        driver.findElement(youTubeMicrophoneButtonPopup).click();
+        driver.findElement(youTubeMicrophoneButtonPopup).click(); //Тут беда, тест проходит, но пишет, что элемент не найден - странно.
     }
 
 
@@ -108,11 +111,6 @@ public class MainPage extends Page_Core {
     }
 
 
-    public void checkYouTubeRegion() {
-
-    }
-
-
     public void checkSearchFieldExisting() {
         waitVisibilityOfElement(driver.findElement(youTubeMainSearchField));
         if (driver.findElement(youTubeMainSearchField).isDisplayed()) {
@@ -120,6 +118,7 @@ public class MainPage extends Page_Core {
         } else
             System.out.println("\n" + "Error! Youtube search field is missed");
     }
+
 
     public void clickOnSearchField(){
         checkSearchFieldExisting();
@@ -155,5 +154,9 @@ public class MainPage extends Page_Core {
         }
     }
 
+
+    public void checkYouTubeRegion() {
+        checkAssertion("Check selected Region","UA",locator("youTubeMainLogoSelectedRegion").getText());
+    }
 
 }
