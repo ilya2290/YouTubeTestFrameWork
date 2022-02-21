@@ -5,7 +5,7 @@ import org.testng.annotations.Test;
 
 public class TEST_CheckVirtualKeyboardAppearance extends Test_Core {
 
-    @Test(priority = 2)
+    @Test()
     public void CheckVirtualKeyboardAppearance() {
         page_core.openPage("https://www.youtube.com/");
         mainPage.checkVirtualKeyboardPresence();
